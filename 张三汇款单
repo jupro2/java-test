@@ -1,0 +1,39 @@
+public class Main {
+    String _Name;
+    String _BankCode;
+    final String _Money="RMB";
+    double _Number=10000.0;
+    int _XuHao=10;
+    int _phone=12345;
+    int _time_year=2021;
+    int _time_month=3;
+    int _time_day=10;
+    public Main(String name,String BankCode)
+    {
+        this._Name=name;
+        this._BankCode=BankCode;
+
+
+    }
+    public void show()
+    {
+        System.out.println("中国工商银行");
+        System.out.println("\n");
+        System.out.println("--------------");
+        System.out.println("日期:"+_time_year+"-"+_time_month+"-"+_time_day);
+        System.out.println("户名:"+_Name);
+        System.out.println("账号:"+_BankCode);
+        System.out.println("币种:"+_Money);
+        System.out.println("存款金额:"+_Number);
+        System.out.println("存款序号:"+_XuHao);
+        System.out.println("柜员号:"+_phone);
+        System.out.println("-----------");
+    }
+
+    public static void main(String[]args)
+    {
+      Main s1=new Main("张三","1234567890987654321");
+      s1.show();
+    }
+
+}
