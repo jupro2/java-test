@@ -1,0 +1,37 @@
+public class Main {
+    public static void main(String[]args)
+    {
+        int[] arr ={63,4,24,1,3,15};
+        Main test=new Main();
+        test.sort(arr);
+    }
+
+    public void sort(int[] arr)
+    {
+        int index;//保存最大值
+        for(int i=1;i<arr.length;i++)
+        {
+            index=0;
+            for(int j=1;j<=arr.length-i;j++)//寻找最大的保存位置
+            {
+                if(arr[j]>arr[index]) {
+                    index = j;
+                }
+            }
+            //然后交换位置
+            int temp=arr[arr.length-i];
+            arr[arr.length-i]=arr[index];
+            arr[index]=temp;
+        }
+       show(arr); //打印
+
+    }
+    public void show(int[] arr)//打印
+    {
+        for(int i:arr)
+        {
+            System.out.println(i);
+        }
+        System.out.println();
+    }
+}
